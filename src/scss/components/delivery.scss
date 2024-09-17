@@ -1,0 +1,11 @@
+.deliveryIntro {
+  background-position: top -500px center;
+  @media(max-width: 1400px){
+   background-position: center; 
+  }
+}
+.deliveryLogos {
+  img {
+    height: fit-content;
+  }
+}

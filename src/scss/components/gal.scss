@@ -1,0 +1,41 @@
+.galSliderW {
+  overflow: hidden;
+}
+
+.gal {
+  &Slide {
+   img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity .2s linear;
+    @media(max-width: 1400px){
+      height: 300px;
+    }
+    @media(max-width: 991px){
+      height: 270px;
+    }
+    @media(max-width: 767px){
+      height: 230px;
+    }
+    @media(max-width: 575px){
+      height: 35vw;
+    }
+    &:hover {
+      opacity: .85;
+    }
+   }
+  }
+
+  &Slider {
+    margin-bottom: 90px;
+    overflow: visible;
+    padding-right: 150px;
+    @media(max-width: 1400px){
+      margin-bottom: 50px;
+    }
+    @media(max-width: 1199px){
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.steps {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 50px;
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+    @media(max-width: 991px){
+      row-gap: 30px;
+    }
+    @media(max-width: 575px){
+      column-gap: 0;
+      margin-top: 30px;
+    }
+  }
+
+  &Item {
+    grid-column: 4 span;
+    display: flex;
+    position: relative;
+    @media(max-width: 991px){
+      grid-column: 6 span;
+    }
+    @media(max-width: 767px){
+      grid-column: 12 span;
+    }
+    &:not(:last-child){
+      &::after {
+        content: '';
+        position: absolute;
+        width: 26px;
+        height: 54px;
+        background: url('@img/icons/arrow-right-lg.svg') no-repeat center center / contain;
+        right: -37px;
+        top: 50%;
+        transform: translateY(-50%);
+        @media(max-width: 767px){
+          right: 0;
+          left: 0;
+          margin: auto;
+          top: unset;
+          bottom: -40px;
+          transform: unset;
+          transform: rotate(90deg);
+          width: 20px;
+        }
+      }
+    }
+
+    &Head {
+      background-color: #FF4500;
+      color: #fff;
+      font-size: 36px;
+      line-height: normal;
+      font-family: var(--third-family);
+      white-space: nowrap;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 60px;
+      min-width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media(max-width: 575px){
+        font-size: 30px;
+        width: 50px;
+        min-width: 50px;
+      }
+    }
+
+    &Content {
+      background: #fff url('@img/icons/linear-step.svg') no-repeat right 30px top / 114px;
+      padding: 30px;
+      @media(max-width: 575px){
+        padding: 20px;
+      }
+    }
+
+    &Title {
+      font-family: var(--second-family);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    &Text {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+  }
+}

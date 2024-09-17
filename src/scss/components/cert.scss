@@ -1,0 +1,23 @@
+.cert {
+  &Sect {
+    background: url('@img/cert/truba-bg.svg') no-repeat right bottom -15px / 800px;
+  }
+
+  &Slide {
+    img {
+      height: 440px;
+      width: 100%;
+      object-fit: cover;
+      transition: opacity .2s linear;
+      @media(max-width: 767px){
+        height: 350px;
+      }
+      @media(max-width: 575px){
+       height: 55vw;
+      }
+      &:hover {
+        opacity: .85;
+      }
+    }
+  }
+}

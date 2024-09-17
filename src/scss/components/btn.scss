@@ -1,0 +1,288 @@
+// btn
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  transition: background-color .2s linear, color .2s linear;
+  column-gap: 10px;
+  height: 69px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+  @media(max-width: 1400px){
+    height: 62px;
+  }
+  @media(max-width: 991px){
+    height: 52px;
+  }
+
+  svg {
+    width: 12px;
+    height: 10px;
+    stroke-width: .5px;
+    fill: transparent;
+    transition: stroke .2s linear, fill .2s linear;
+  }
+
+  &--sm {
+    height: 51px;
+    font-size: 15px;
+    @media(max-width: 767px){
+      height: 40px;
+    }
+  }
+
+  &--transparent {
+    color: $main-color;
+    border: 2px solid var(--orange);
+
+    &:hover {
+      background-color: var(--orange);
+      color: #fff;
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+    color: var(--black);
+
+    svg {
+      stroke: var(--black);
+      fill: #000;
+    }
+
+    &:hover {
+      background-color: var(--orange);
+      color: #fff;
+
+      svg {
+        stroke: #fff;
+        fill: #fff;
+      }
+    }
+
+  }
+
+  &--black {
+    background-color: var(--black);
+    color: #fff;
+    svg {
+      fill: #fff;
+      stroke: #fff;
+    }
+
+    &:hover {
+      background-color: var(--orange);
+    }
+  }
+
+  &--blue {
+    background-color: var(--blue);
+    color: #fff;
+
+    &:hover {
+      background-color: var(--orange);
+    }
+  }
+
+  &--orange {
+    background-color: var(--orange);
+    color: #fff;
+
+    svg {
+      stroke: #fff;
+      fill: #fff;
+    }
+
+    &:hover {
+      background-color: var(--black);
+      color: #fff;
+
+      svg {
+        stroke: var(--black);
+        fill: var(--black);
+      }
+    }
+  }
+
+  &--light-blue {
+    background-color: var(--light-blue);
+
+    &:hover {
+      background-color: var(--black);
+      color: #fff;
+    }
+  }
+
+  .arrow {
+    width: 11px;
+  }
+
+  &--rect {
+    clip-path: polygon(7% 0%,
+        100% 0%,
+        91% 100%,
+        0% 100%);
+  }
+}
+
+.complectBtn {
+  clip-path: polygon(16% 0%,
+      100% 0%,
+      84% 100%,
+      0% 100%);
+      &:hover {
+        background-color: var(--light-blue);
+        color: var(--black);
+      }
+}
+
+.postavkaBtn {
+  margin-left: auto;
+  margin-top: 30px;
+  @media(max-width: 991px){
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--margin {
+    margin-right: 100px;
+    @media(max-width: 991px){
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.footerBtn {
+  width: 100%;
+
+  &:hover {
+    background-color: var(--light-blue);
+    color: var(--black);
+  }
+}
+
+.calcBtn {
+  width: 270px;
+  min-width: 270px;
+  @media(max-width: 991px){
+    width: 100%;
+  }
+  svg {
+    width: 18px;
+    height: 18px;    
+    stroke-width: .05px;
+  }
+  &W {
+    width: 100%;
+    @media(max-width: 575px){
+      flex-direction: column;
+    }
+    .button {
+      width: 50%;
+      height: 60px;
+      @media(max-width: 575px){
+        width: 100%;
+      }
+    }
+  }
+
+  &Descr {
+    padding-left: 30px;
+    font-size: 16px;
+    border: 1px dashed var(--orange);
+    min-height: 69px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @media(max-width: 1400px){
+      min-height: 62px;
+    }
+    @media(max-width: 575px){
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.shopFilterBtnW {
+  display: flex;
+  column-gap: 16px;
+
+  .berocket_single_filter_widget {
+    width: 50%;
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    .bapf_body {
+      width: 100%;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      &.hidden {
+        display: block;
+      }
+    }
+  }
+}
+
+.shopFilterBtn {
+  padding: 0;
+  width: 100%;
+  height: fit-content;
+
+  .bapf_button {
+    height: 48px;
+    width: 100%;
+  }
+}
+
+.productBtn {
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 500;
+  @media(max-width: 575px){
+    width: 100%;
+  }
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.productAdvItemText {
+  font-size: 14px;
+  line-height: 20px;
+}
+.aboutIntroBtn{
+  margin-left: 200px;
+  margin-bottom: 40px;
+  @media(max-width: 991px){
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.postavkaIntroBtn{
+  margin-left: 300px;
+  @media(max-width: 991px){
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.postavkaCalcBtn{
+  height: 60px;
+  @media(max-width: 991px){
+    height: 52px;
+  }
+  @media(max-width: 390px){
+    font-size: 14px;
+    min-width: unset;
+  }
+}

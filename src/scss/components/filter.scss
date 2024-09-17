@@ -1,0 +1,122 @@
+.bapf_head {
+  cursor: pointer;
+  &.hidden {
+    h3 {
+      background: url('@img/icons/arrow-down.svg') no-repeat right center / 12px;     
+    }
+   
+  }
+
+  h3 {
+    margin-bottom: 18px;
+    padding-right: 22px;
+    background: url('@img/icons/arrow-up.svg') no-repeat right center / 12px;
+    font-size: 17px;
+    font-family: var(--font-family);
+    @media(max-width: 767px){
+      margin-bottom: 12px;
+    }
+  }
+}
+.bapf_body{
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  @media(max-width: 767px){
+    padding-bottom: 15px;
+  }
+  &.hidden {
+    display: none;
+  }
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      margin-bottom: 10px;
+      input {
+        margin: 0;
+        width: 18px;
+        height: 18px;
+        @media(max-width: 991px){
+          font-size: 16px;
+        }
+      }
+      label {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color .2s linear;
+        &:hover {
+          color: var(--orange);
+        }
+      }
+    }
+  }
+}
+.bapf_slidr_all{
+  display: flex;
+  width: calc(100% - 16px);
+}
+.bapf_from{
+  width: 50%;
+  position: relative;
+  margin-right: 8px;
+  &::before {
+    content: 'От';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    color: rgba($color: #000000, $alpha: .5);
+    font-weight: 500;
+
+  }
+  input {
+    background-color: #F5F7F9;
+    width: 100%;
+    height: 48px;
+    padding-left: 40px;
+    @media(max-width: 991px){
+      font-size: 16px;
+    }
+  }
+}
+.bapf_to{
+  width: 50%;
+  position: relative;
+  margin-left: 8px;
+  &::before {
+    content: 'До';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    color: rgba($color: #000000, $alpha: .5);
+    font-weight: 500;
+
+  }
+  
+  input {
+    background-color: #F5F7F9;
+    width: 100%;
+    height: 48px;
+    padding-left: 40px;
+    @media(max-width: 991px){
+      font-size: 16px;
+    }
+  }
+}
+.bapf_taprice{
+  position: absolute;
+  display: none;
+}
+.berocket_single_filter_widget {
+  padding-bottom: 0;
+  border-bottom: 1px solid #EDF0F4;
+  margin-bottom: 20px;
+  @media(max-width: 767px){
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,70 @@
+.adv {
+  &Sect {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    @media(max-width: 767px){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+  &Item {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;  
+   
+    &Count {
+      -webkit-text-stroke: 2px #FFFFFF; 
+      text-stroke: 2px #FFFFFF;
+      font-size: 75px;
+      line-height: normal;
+      font-family: var(--third-family);
+      @media(max-width: 1400px){
+        font-size: 55px;
+        text-stroke: 1px #FFFFFF;
+        -webkit-text-stroke: 1px #FFFFFF; 
+      }
+      img {
+        height: 100px;
+      }      
+    }
+
+    &Text {
+      color: #FFF;
+      font-size: 17px;
+      font-weight: 600;
+      opacity: .75;
+      max-width: 165px;       
+      @media(max-width: 1199px){
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+      }
+    }
+  }
+  &Card {
+    padding: 30px;
+    background-image: url('@img/icons/rect-light-blue-linear.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right 30px center;
+    @media(max-width: 575px){
+      padding: 20px 15px;
+    }
+    &Icon {
+      margin-bottom: 20px;
+      height: 60px;
+      @media(max-width: 575px){
+        height: 40px;
+        margin-bottom: 10px;
+      }
+    }
+    &Text {
+      font-size: 16px;
+      font-weight: 500;
+      @media(max-width: 575px){
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

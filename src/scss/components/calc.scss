@@ -1,0 +1,54 @@
+.calc {
+
+  &Bg {
+    overflow: hidden;
+    background: url('@img/calc/calc-truba.svg') no-repeat left center / 1300px;
+
+    @media(min-width: 2700px) {
+      background: none;
+    }
+    @media(max-width: 767px){
+      background-color: #fff;
+      background-image: none;
+    }
+
+    .container {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: #fff;
+      }
+    }
+  }
+
+  &W {
+    max-width: 945px;
+    padding-left: 235px;
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-left: auto;
+    clip-path: polygon(15% 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%);
+    position: relative;
+
+    @media(max-width: 767px) {
+      padding-left: 0;
+      clip-path: unset;
+      padding-top: 70px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &List {
+    max-width: 460px;
+  }
+}

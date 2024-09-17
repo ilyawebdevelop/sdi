@@ -1,0 +1,27 @@
+.partners {
+  overflow: hidden;
+  &Slider {
+    margin-top: 100px;
+    overflow: visible;
+    @media(max-width: 1400px){
+      margin-top: 60px;
+    }
+    @media(max-width: 767px){
+      margin-top: 30px;
+    }
+    @media(max-width: 575px){
+      padding-right: 80px;
+      overflow: visible;
+    }
+    .swiper-wrapper {
+      align-items: center;
+    }
+  }
+  &Slide {
+    width: fit-content;
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

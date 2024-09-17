@@ -1,0 +1,121 @@
+.postavka {
+  padding-top: 70px;
+  padding-bottom: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba($color: #0D233E, $alpha: .85);
+  }
+
+  &Title {
+    position: relative;
+
+    @media(max-width: 991px) {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 265px;
+      height: 329px;
+      background-color: #FF4500;
+      left: 0;
+      top: -43px;
+      clip-path: polygon(33% 0%,
+          100% 0%,
+          67% 100%,
+          0% 100%);
+      z-index: -1;
+
+      @media(max-width: 991px) {
+        display: none;
+      }
+    }
+
+    &--lg {
+      &::before {
+        width: 261px;
+        height: 362px;
+        top: -56px;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &Item {
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-column: 6 span;
+    text-align: center;
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+      width: 57px;
+      @media(max-width: 575px){
+       width: 40px; 
+       margin-bottom: 15px;
+      }
+    }
+
+    &:nth-child(3) {
+      grid-column: 12 span;
+    }
+
+    &Text {
+      max-width: 323px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 17px;
+      line-height: 25px;
+      @media(max-width: 767px){
+        font-size: 15px;
+        line-height: 22px;
+      }
+      @media(max-width: 575px){
+        font-size: 13px;
+      }
+    }
+
+    &--lg {
+      img {
+        width: 100px;
+        @media(max-width: 767px){
+          width: 80px;
+        }
+      }
+
+      .postavkaItemText {
+        max-width: 250px;
+      }
+    }
+  }
+
+  &List {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 20px;
+    padding-bottom: 40px;
+    @media(max-width: 767px){
+      padding-bottom: 50px;
+    }
+  }
+}

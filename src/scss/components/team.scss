@@ -1,0 +1,41 @@
+.team {
+  &Slide {
+    &Img {
+      margin-bottom: 20px;
+      @media(max-width: 767px){
+        margin-bottom: 13px;
+      }
+      img {
+        height: 440px;
+        width: 100%;
+        object-fit: cover;
+        transition: opacity .2s linear;
+        @media(max-width: 767px){
+          height: 350px;
+        }
+        @media(max-width: 575px){
+          height: 60vw;
+        }
+        &:hover {
+          opacity: .85;
+        }
+      }     
+    }
+    &Title {
+      font-weight: 700;
+      font-family: var(--second-family);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      @media(max-width: 575px){
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+    &Work {
+      font-size: 13px;
+      line-height: 20px;
+      font-weight: 500;
+      color: rgba($color: #0D233E, $alpha: .5);
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.cat {
+  &Card {
+    padding: 30px 33px 33px;
+    min-height: 235px;
+    position: relative;
+    @media(max-width: 767px){
+      padding: 20px;
+    }
+    @media(max-width: 575px){
+      min-height: unset;
+    }
+    &:hover {
+      .catCardTitle {
+        color: var(--orange);
+      }
+      .arrow-link {
+        img {
+          transform: translateX(-3px);
+        }
+      }
+    }
+
+    &Title {
+      margin-bottom: 20px;
+      transition: color .2s linear;
+    }
+
+    &Text {
+      font-size: 13px;
+      line-height: 20px;
+      opacity: .75;
+      max-width: 278px;
+      @media(max-width: 575px){
+        max-width: 225px;
+      }
+    }
+    &Img {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      @media(max-width: 1400px){
+        width: 130px;
+        height: 130px;
+      }
+      @media(max-width: 1199px){
+        width: 110px;
+        height: 110px;
+      }
+      @media(max-width: 575px){
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

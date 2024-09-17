@@ -1,0 +1,46 @@
+<section class="sect bg--white productSliderW">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 sectHead">
+
+      <h2 class="h2 title title--orange text-uppercase" style="max-width: 586px;">
+        <span>Похожие товары</span>
+      </h2>
+      <div class="navArrowW">
+        <button class="navArrow navArrowPrev">
+          <img src="@img/icons/slider-prev.svg" alt="arrow">
+        </button>
+        <button class="navArrow navArrowNext">
+          <img src="@img/icons/slider-next.svg" alt="arrow">
+        </button>
+      </div><!-- /navArrowW -->
+
+    </div>
+
+    <div class="swiper productSlider">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide productSlide">
+          @@include('../shop/card-1.html',{})
+        </div><!-- /productSlide -->
+
+        <div class="swiper-slide productSlide">
+          @@include('../shop/card-2.html',{})
+        </div><!-- /productSlide -->
+
+        <div class="swiper-slide productSlide">
+          @@include('../shop/card-3.html',{})
+        </div><!-- /productSlide -->
+
+        <div class="swiper-slide productSlide">
+          @@include('../shop/card-4.html',{})
+        </div><!-- /productSlide -->
+
+        <div class="swiper-slide productSlide">
+          @@include('../shop/card-1.html',{})
+        </div><!-- /productSlide -->
+
+      </div>
+    </div><!-- /productSlider -->
+
+  </div>
+</section>
